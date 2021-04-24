@@ -1,15 +1,15 @@
 package com.example.tourgiuiding2;
 
-public class ItemList {
+public class EachItem {
     private int img_rcs;
     private String name;
 
-    public ItemList(int img_rcs, String name) {
+    public EachItem(int img_rcs, String name) {
         this.img_rcs = img_rcs;
         this.name = name;
     }
 
-    public ItemList(String name) {
+    public EachItem(String name) {
         this.name = name;
     }
 
