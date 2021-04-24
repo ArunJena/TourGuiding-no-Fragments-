@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TourGiuiding2">
-        <activity android:name=".Sites"></activity>
+        <activity android:name=".Sites" />
         <activity android:name=".Hotel" />
         <activity android:name=".Temple" />
         <activity android:name=".MainActivity">
