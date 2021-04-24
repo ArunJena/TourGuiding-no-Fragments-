@@ -20,6 +20,7 @@
             android:layout_height="match_parent"
             android:textAllCaps="true"
             android:textStyle="bold"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
