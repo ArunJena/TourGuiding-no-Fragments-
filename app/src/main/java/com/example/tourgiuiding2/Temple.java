@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -48,26 +49,14 @@ public class Temple extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                //List contain one item
-                //Fit the item details in a list
-                //Set appropriate adapter for the list
-                //Set adapter for the list
-                ArrayList<EachItem> oneItem= new ArrayList<EachItem>();
-                oneItem.add(arrayList.get(position));
-
-//                ItemDetailsAdapter itemDetailsAdapter = new ItemDetailsAdapter(getApplicationContext(),oneItem);
-//                ListView listView1 = (ListView)findViewById(R.id.list);
-//                listView.setAdapter(itemDetailsAdapter);
-
-                CustoumAdapter custoumAdapter = new CustoumAdapter(getApplicationContext(),arrayList);
-                ListView listView  = (ListView)findViewById(R.id.list);
-                listView.setAdapter(custoumAdapter);
-                setContentView(R.layout.arrayadapter_list);
-
+                EachItem eachItem = arrayList.get(position);
+                Intent intent = new Intent(getApplicationContext(),DetailedActivity.class);
+                // intent.putExtra("Temple", (Parcelable) eachItem);
+                intent.putExtra("EachItem",eachItem);
+                startActivity(intent);
                 Toast.makeText(getApplicationContext(),"onclickListener works",Toast.LENGTH_SHORT).show();
 
             }
         });
-
     }
 }
